@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width initial-scale=1.0">
+    <title>ShelfSpace</title>
+    
+</head>
+<body>
+    <header>
+        <title>Reading stats</title>
+    </header>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShelfSpace - Reading Stats</title>
+
+    <!-- Common CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <h2 class="logo">ShelfSpace</h2>
+
+        <div class="header-actions">
+            <a href="index.html">My Shelf</a>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <section class="extra-features">
+
+            <h2>Reading Stats</h2>
+
+            <div class="stats-container">
+                <div class="stat-card">
+                    <h4>BOOKS DONE</h4>
+                    <h2 id="booksDone">0 / 12</h2>
+                    <p>Goal: 12 this year</p>
+                </div>
+
+                <div class="stat-card">
+                    <h4>PAGES READ</h4>
+                    <h2 id="pagesRead">0</h2>
+                    <p>Total pages completed</p>
+                </div>
+
+                <div class="stat-card">
+                    <h4>AVERAGE RATING</h4>
+                    <h2 id="averageRating">0</h2>
+                    <p>Across finished books</p>
+                </div>
+
+                <div class="stat-card">
+                    <h4>DAYS TO FINISH</h4>
+                    <h2 id="daysToFinish">-</h2>
+                    <p>At 30 pages a day</p>
+                </div>
+            </div>
+
+            <div class="features-container">
+
+                <div class="feature-card">
+                    <h3>Reading Session</h3>
+                    <h1 id="timer">25:00</h1>
+
+                    <button id="startTimer">Start</button>
+                    <button id="pauseTimer">Pause</button>
+                    <button id="resetTimer">Reset</button>
+                </div>
+
+                <div class="feature-card">
+                    <h3>Add a Custom Book</h3>
+
+                    <label>Title</label>
+                    <input type="text" id="customTitle" placeholder="Book title">
+
+                    <label>Author</label>
+                    <input type="text" id="customAuthor" placeholder="Author name">
+
+                    <label>Pages</label>
+                    <input type="number" id="customPages" placeholder="320">
+
+                    <button id="addCustomBook">Add Book</button>
+                </div>
+
+                <div class="feature-card">
+                    <h3>Share and Export</h3>
+
+                    <label>Email</label>
+                    <input type="email" id="shareEmail" placeholder="you@example.com">
+
+                    <label>Shelf JSON</label>
+                    <textarea id="shelfJSON" ></textarea>
+
+                    <button id="sendSummary">Send Summary</button>
+                    <button id="copyJSON">Copy JSON</button>
+                    <button id="importJSON">Import</button>
+
+                    <input type="file" id="importFile" accept=".json" hidden>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- Common JavaScript -->
+    <script src="stats.js"></script>
+
+</body>
+</html>
+
+   

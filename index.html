@@ -1,0 +1,322 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ShelfSpace - Book Management</title>
+    <a href="reading_stats.html"></a>
+
+    <!-- CSS File -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="header">
+
+        <h2 class="logo">ShelfSpace</h2>
+
+        <div class="header-actions">
+
+       
+                
+        <a href="reading_stats.html"
+               class="user-status"
+               id="goalStatus">
+                Hi Reader! - Goal 0 / 12 - On track
+        </a>
+
+
+            <button id="undoBtn">
+                Undo
+            </button>
+
+            <button id="exportBtn" class="export-btn">
+                Export JSON
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <!-- ================= MAIN CONTAINER ================= -->
+
+    <main class="container">
+
+
+        <!-- ================= HERO SECTION ================= -->
+
+        <section class="hero">
+
+            <h1>Find your next read.</h1>
+
+            <p>
+                Search millions of books, build your shelf and track every page.
+            </p>
+
+        </section>
+
+
+        <!-- ================= SEARCH SECTION ================= -->
+
+        <section class="search-section">
+
+            <h4>Search books</h4>
+
+            <div class="search-box">
+
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Enter book title or author"
+                >
+
+                <button
+                    id="searchBtn"
+                    class="search-btn"
+                >
+                    Search
+                </button>
+
+                <button
+                    id="randomBtn"
+                    class="random-btn"
+                >
+                    Pick a book for me
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= SEARCH STATUS ================= -->
+
+        <section class="search-results">
+
+            <p id="statusMessage">
+                Loading books...
+            </p>
+
+        </section>
+
+
+        <!-- ================= BOOK RESULTS ================= -->
+
+        <section
+            class="recommended-section"
+            id="bookContainer"
+        >
+
+            <!-- Book cards will be created dynamically using JavaScript -->
+
+        </section>
+
+
+        <!-- ================= DISCOVER BY SUBJECT ================= -->
+
+        <section class="subject-section">
+
+            <h2>Discover by subject</h2>
+
+            <div class="subject-container">
+
+
+                <!-- Fantasy -->
+
+                <div class="subject-card">
+
+                    <h3>Fantasy</h3>
+
+                   
+
+                    <button
+                        class="subject-btn"
+                        data-subject="fantasy"
+                    >
+                        Explore Fantasy
+                    </button>
+
+                </div>
+
+
+                <!-- Science -->
+
+                <div class="subject-card">
+
+                    <h3>Science</h3>
+
+                   
+
+                    <button
+                        class="subject-btn"
+                        data-subject="science"
+                    >
+                        Explore Science
+                    </button>
+
+                </div>
+
+
+                <!-- History -->
+
+                <div class="subject-card">
+
+                    <h3>History</h3>
+
+                   
+
+                    <button
+                        class="subject-btn"
+                        data-subject="history"
+                    >
+                        Explore History
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= MY SHELF ================= -->
+
+        <section class="my-shelf">
+
+
+            <!-- Shelf Heading -->
+
+            <div class="shelf-heading">
+
+                <h2>My shelf</h2>
+
+                <div class="sort-buttons">
+
+                    <button id="sortTitleBtn">
+                        Sort: Title
+                    </button>
+
+                    <button id="sortRatingBtn">
+                        Sort: Rating
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- Shelf Container -->
+
+            <div class="shelf-container">
+
+
+                <!-- ================= TO READ ================= -->
+
+                <div class="shelf-column">
+
+                    <div class="shelf-title to-read">
+
+                        <h4>To Read</h4>
+
+                        <span id="toReadCount">0</span>
+
+                    </div>
+
+                    <div id="toReadList">
+
+                        <!-- To Read books appear here -->
+
+                    </div>
+
+                </div>
+
+
+                <!-- ================= READING ================= -->
+
+                <div class="shelf-column">
+
+                    <div class="shelf-title reading">
+
+                        <h4>Reading</h4>
+
+                        <span id="readingCount">0</span>
+
+                    </div>
+
+                    <div id="readingList">
+
+                        <!-- Reading books appear here -->
+
+                    </div>
+
+                </div>
+
+
+                <!-- ================= DONE ================= -->
+
+                <div class="shelf-column">
+
+                    <div class="shelf-title done">
+
+                        <h4>Done</h4>
+
+                        <span id="doneCount">0</span>
+
+                    </div>
+
+                    <div id="doneList">
+
+                        <!-- Completed books appear here -->
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <!-- ================= BOOK DETAILS MODAL ================= -->
+
+    <div class="modal" id="bookModal">
+
+        <div class="modal-content">
+
+            <button
+                class="close-modal"
+                id="closeModal"
+                aria-label="Close"
+            >
+                &times;
+            </button>
+
+            <div id="modalDetails">
+
+                <!-- Selected book details appear here -->
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= JAVASCRIPT ================= -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

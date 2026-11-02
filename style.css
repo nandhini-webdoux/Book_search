@@ -1,0 +1,676 @@
+
+/* General Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+#my-shelf {
+    scroll-margin-top: 30px;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f3f4fa;
+    color: #1c2140;
+}
+
+/* Header */
+.header {
+    background-color: white;
+    padding: 18px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.user-status {
+    background-color: #ffc328;
+    padding: 12px 18px;
+    border-radius: 25px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+button {
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 8px;
+    padding: 12px 18px;
+    background-color: white;
+    border: 1px solid #252b50;
+    color: #1c2140;
+}
+
+.export-btn {
+    background-color: #4338ca;
+    color: white;
+    border: none;
+}
+
+/* Main Container */
+.container {
+    padding: 35px;
+}
+
+/* Hero Section */
+.hero {
+    margin-bottom: 25px;
+}
+
+.hero h1 {
+    font-size: 38px;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 15px;
+    color: #50536a;
+}
+
+/* Search Section */
+.search-section {
+    margin-bottom: 20px;
+}
+
+.search-section h4 {
+    margin-bottom: 10px;
+}
+
+.search-box {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.search-box input {
+    width: 350px;
+    padding: 13px;
+    border: 1px solid #8b8da1;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.search-btn {
+    background-color: #4338ca;
+    color: white;
+    border: none;
+}
+
+.random-btn {
+    background-color: white;
+}
+
+/* Search Status */
+.search-results {
+    margin-bottom: 20px;
+}
+
+#statusMessage {
+    font-size: 14px;
+    color: #50536a;
+}
+
+/* Recommended Books */
+.recommended-section {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 15px;
+    margin-bottom: 35px;
+}
+
+.book-card {
+    background-color: white;
+    border: 1px solid #e2e4ed;
+    border-radius: 12px;
+    padding: 12px;
+    min-width: 0;
+}
+
+.book-cover {
+    width: 100%;
+    height: 200px;
+    background-color: #e5e7eb;
+    border-radius: 8px;
+    margin-bottom: 12px;
+    overflow: hidden;
+}
+
+.book-cover img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.book-card h4 {
+    font-size: 15px;
+    margin-bottom: 8px;
+}
+
+.book-card p {
+    font-size: 12px;
+    color: #50536a;
+    margin-bottom: 12px;
+}
+
+.book-card button {
+    width: 100%;
+    background-color: #4338ca;
+    color: white;
+    border: none;
+}
+
+/* Discover By Subject */
+.subject-section {
+    margin-bottom: 35px;
+}
+
+.subject-section h2,
+.my-shelf h2 {
+    margin-bottom: 15px;
+}
+
+.subject-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.subject-card {
+    background-color: white;
+    border: 1px solid #e2e4ed;
+    border-radius: 12px;
+    padding: 20px;
+}
+
+.subject-card h3 {
+    margin-bottom: 12px;
+}
+
+.subject-card ul {
+    padding-left: 20px;
+    line-height: 25px;
+    font-size: 13px;
+}
+
+/* My Shelf */
+.shelf-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.sort-buttons {
+    display: flex;
+    gap: 8px;
+}
+
+/* Shelf Columns */
+.shelf-container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 15px;
+}
+
+.shelf-title {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px;
+    color: white;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.to-read {
+    background-color: #1c2140;
+}
+
+.reading {
+    background-color: #4338ca;
+}
+
+.done {
+    background-color: #117c72;
+}
+
+/* Shelf Book */
+.shelf-book {
+    background-color: white;
+    border: 1px solid #e2e4ed;
+    border-radius: 10px;
+    padding: 12px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.small-cover {
+    width: 55px;
+    height: 75px;
+    overflow: hidden;
+    border-radius: 6px;
+    background-color: #e5e7eb;
+}
+
+.small-cover img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.book-info h4 {
+    font-size: 13px;
+    margin-bottom: 6px;
+}
+
+.book-info p,
+.rating,
+.progress-text {
+    font-size: 11px;
+    color: #50536a;
+}
+
+.shelf-book button {
+    width: 100%;
+}
+
+
+
+/* Progress Details */
+
+.progress-details {
+    font-size: 13px;
+    font-weight: 600;
+    margin: 12px 0 8px;
+}
+
+/* Progress Bar */
+
+.progress-bar {
+    width: 100%;
+    height: 9px;
+    background-color: #dedfed;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-bottom: 12px;
+}
+
+/* Progress Fill */
+
+.progress-fill {
+    height: 100%;
+    background-color: #4939cf;
+    border-radius: 20px;
+    transition: width 0.4s ease;
+}
+
+/* Update Button */
+
+.update-progress-btn {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #454568;
+    border-radius: 9px;
+    background-color: white;
+    color: #252544;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.update-progress-btn:hover {
+    background-color: #4939cf;
+    color: white;
+}
+
+
+
+
+/* Responsive Design */
+@media (max-width: 900px) {
+    .recommended-section {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .shelf-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .header-actions {
+        flex-wrap: wrap;
+    }
+
+    .container {
+        padding: 18px;
+    }
+
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    .search-box input {
+        width: 100%;
+    }
+
+    .recommended-section {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .subject-container {
+        grid-template-columns: 1fr;
+    }
+
+    .shelf-heading {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+}
+
+/* Book Card */
+.book-card {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.book-cover {
+    width: 100%;
+    height: 230px;
+    background: #e5e7eb;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.book-cover img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.book-card h4 {
+    font-size: 15px;
+    line-height: 1.4;
+}
+
+.book-description {
+    font-size: 12px;
+    color: #666;
+    line-height: 1.5;
+}
+
+.book-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    margin-top: auto;
+}
+
+.book-actions button {
+    width: 100%;
+    background: #4338ca;
+    color: white;
+    border: none;
+}
+
+/* Shelf Book */
+.shelf-book {
+    background: white;
+    border: 1px solid #e2e4ed;
+    border-radius: 10px;
+    padding: 12px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.small-cover {
+    width: 55px;
+    height: 75px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.shelf-book button {
+    width: 100%;
+}
+
+.shelf-book input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.modal-content {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 550px;
+    max-height: 85vh;
+    overflow-y: auto;
+    position: relative;
+}
+
+.close-modal {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    font-size: 24px;
+}
+
+.modal-book-image {
+    width: 130px;
+    height: 180px;
+    object-fit: contain;
+    margin-bottom: 15px;
+}
+
+.modal-description {
+    line-height: 1.7;
+    color: #555;
+    margin: 15px 0;
+}
+
+.subject-btn {
+    margin-top: 12px;
+    background: #4338ca;
+    color: white;
+    border: none;
+}
+
+.empty-shelf {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    color: #777;
+    font-size: 13px;
+}
+
+@media (max-width: 600px) {
+    .recommended-section {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+
+/* =================================
+   READING STATS PAGE
+================================= */
+
+.extra-features {
+    padding: 30px 0;
+}
+
+.extra-features > h2 {
+    color: #20213e;
+    margin-bottom: 20px;
+}
+
+/* Statistics Cards */
+
+.stats-container {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.stat-card {
+    background: #ffffff;
+    padding: 20px;
+    border: 1px solid #e1e3ed;
+    border-radius: 14px;
+}
+
+.stat-card h4 {
+    font-size: 12px;
+    color: #555b78;
+    margin-bottom: 10px;
+}
+
+.stat-card h2 {
+    font-size: 28px;
+    color: #20213e;
+}
+
+.stat-card p {
+    font-size: 12px;
+    color: #777;
+    margin-top: 8px;
+}
+
+/* Feature Cards */
+
+.features-container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.feature-card {
+    background: #ffffff;
+    padding: 20px;
+    border: 1px solid #e1e3ed;
+    border-radius: 14px;
+}
+
+.feature-card h3 {
+    color: #20213e;
+    margin-bottom: 15px;
+}
+
+.feature-card h1 {
+    font-size: 42px;
+    color: #20213e;
+    margin-bottom: 15px;
+}
+
+/* Form Fields */
+
+.feature-card label {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    margin: 12px 0 6px;
+}
+
+.feature-card input,
+.feature-card textarea {
+    width: 100%;
+    padding: 11px;
+    border: 1px solid #777b91;
+    border-radius: 8px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+.feature-card textarea {
+    height: 65px;
+    resize: vertical;
+}
+
+/* Buttons */
+
+.feature-card button {
+    background: #4338ca;
+    color: white;
+    border: none;
+    padding: 10px 14px;
+    border-radius: 8px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.feature-card button:hover {
+    background: #3025a8;
+}
+
+.user-status {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.user-status:hover {
+    color: #4338ca;
+}
+
+
+/* Responsive Design */
+
+@media (max-width: 900px) {
+    .stats-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .features-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .stats-container,
+    .features-container {
+        grid-template-columns: 1fr;
+    }
+}
